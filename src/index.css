@@ -1,0 +1,245 @@
+/* src/index.css */
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Open+Sans:wght@300&family=Rubik:wght@800&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e1e;
+  text-align: center;
+  /* Dark background color */
+  color: #ffffff;
+  /* Text color for dark mode */
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+  height: 75vh;
+  width: 100vw;
+  max-width: 80vw;
+  border: 1px solid #555555;
+  /* Dark gray border for dark mode */
+  border-radius: 8px;
+  margin: 0 auto;
+  /* Center horizontally */
+  background-color: #2d2d2d;
+  /* Dark background color for dark mode */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  /* Light shadow for dark mode */
+}
+
+.message-container {
+  flex-grow: 1;
+  /* Remove scrollbar */
+  overflow: hidden;
+  padding: 10px;
+  /* margin: 5px; */
+  background-color: #2d2d2d;
+  /* Dark background color for dark mode */
+}
+
+/* Message styling */
+/* Inside your CSS file */
+
+.message {
+  /* margin-bottom: 0px; */
+  min-height: 10%;
+  width: 30%;
+  display: block;
+  position: relative;
+  padding-bottom: 0px;
+  margin-bottom: 5px;
+  padding-right: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  /* Preserve spaces and line breaks */
+}
+
+.message-sender {
+  text-align: right;
+  background-color: #53d769;
+  width: 30%;
+  min-height: 10%;
+  /* Blue color for sender messages */
+  color: #ffffff;
+  margin-left: auto;
+  /* Push sender messages to the right */
+}
+
+.message-recipient {
+  text-align: left;
+ background-color: #147efb;
+  /* Blue color for recipient messages */
+  color: #ffffff;
+  margin-right: auto;
+  /* Push recipient messages to the left */
+}
+
+.message-content {
+  /* padding: 5px; */
+  font-weight: lighter;
+  display: block;
+  padding: 5px 5px;
+  font-size: 1.2rem;
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Rubik', sans-serif;
+}
+
+.message-username {
+  display: flex;
+  padding: 5px;
+  transform: translateY(-5px);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #070707;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+  /* position: fixed; */
+}
+
+/* Scrollbar styles (removed) */
+/* ... */
+
+/* src/index.css */
+
+.textarea-style {
+  height: 10%;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 100%;
+  padding: 10px;
+  background-color: #2d2d2d;
+  color: aliceblue;
+  border: 1px solid #dbdbdb;
+  border-radius: 90px;
+  min-height: 35px;
+  resize: none;
+  /* Adjust as needed */
+}
+
+.textarea-style:focus {
+  outline: none;
+  border-color: #218aff;
+  /* Change border color when focused */
+  padding: 10px;
+  /* Add padding when textarea is focused */
+}
+
+.input-container textarea::placeholder {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 16px;
+  text-align: left;
+  line-height: normal;
+  /* Adjust the font size as needed */
+  color: #a0a0a0;
+  /* Adjust the color as needed */
+}
+
+/* Input styling */
+.input-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  margin-right: 10px;
+  resize: none;
+  /* Disable text area resizing */
+}
+
+.input-container input::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  
+  /* Adjust the font size as needed */
+  color: #000000;
+  /* Adjust the color as needed */
+}
+
+.input-container button {
+  margin-right: 5px;
+  background-color: #53d769;
+  color: #ffffff;
+  border: none;
+  padding: 5%;
+  padding-right: 5%;
+  width: 20%;
+  padding: 10px 15px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chat-container {
+    width: 90%;
+    /* Adjust width for smaller screens */
+  }
+}
+
+
+/* src/index.css */
+
+.input-container button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 5px;
+  background-color: #53d769;
+  color: #000000;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  border: none;
+  padding: 5%;
+  padding-right: 5%;
+  width: 20%;
+  padding: 10px 15px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.input-container button svg {
+  margin-left: -50px;
+}
+
+footer{
+  margin: 20px;
+  padding-top: 10px;
+  padding: 0;
+  margin-bottom: 5px;
+  font-weight: 100;
+}
+
+
+/* Add these styles to your CSS */
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.message-username {
+  font-weight: bold;
+}
+
+.message-timestamp {
+  font-size: 0.8rem;
+  color: #000000;
+}
