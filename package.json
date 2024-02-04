@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.16",
     "firebase": "^10.6.0",
+    "mongodb": "^6.3.0",
     "postcss-cli": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -20,8 +21,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
+    "start-server": "nodemon server.js",
+    "start-client": "react-scripts start",
+    "build": "npm install && npm install --prefix src && npm run build --prefix src",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -44,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   }

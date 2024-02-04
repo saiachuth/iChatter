@@ -28,7 +28,17 @@ const Input = ({ sendMessage }) => {
       />
       <button onClick={handleSendMessage}>
         Send
-        <svg
+      
+      </button>
+    </div>
+  );
+};
+
+export default Input;
+
+
+/**
+ *   <svg
           height='24'
           width='24'
           viewBox='0 0 24 24'
@@ -36,9 +46,4 @@ const Input = ({ sendMessage }) => {
         >
           <path d='M2.01 21L23 12 2.01 3 2 10l15 2-15 2z' />
         </svg>
-      </button>
-    </div>
-  );
-};
-
-export default Input;
+ */

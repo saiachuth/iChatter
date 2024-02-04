@@ -8,7 +8,7 @@ function App() {
       <h1>iChatter 💬</h1>
       <Chat />
 
-      <footer>Made with ♥︎ by Sai Achuth</footer>
+      <footer>Coded with ♥︎ by Sai Achuth</footer>
     </div>
   );
 }
